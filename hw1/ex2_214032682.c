@@ -1,24 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    int score;
-    int invalid_attempts = 0; // Track invalid attempts
+    int score,true=1;
+    int invalid = 0; //invalid_attempts
 
-    while (1) {
+    while (true) {
         printf("Please enter your exam score (0-100): ");
-        if (scanf("%d", &score) != 1) {
-            // If input is not an integer
-            printf("Invalid input score: Non-integer value\n");
-            while (getchar() != '\n'); // Clear input buffer
-            invalid_attempts++;
+        score
+        if (scanf("%d", &score) != 1) {//not_int
+            printf("Invalid input score:\n");
         } else if (score < 0 || score > 100) {
-            // If score is out of range
             printf("Invalid input score: %d\n", score);
-            invalid_attempts++;
+            invalid++;
         } else {
-            // Valid score, determine grade and feedback using switch
             switch (score / 10) {
-                case 10: // Fallthrough for scores 100
+                case 10:
+                    printf("Grade: A\nWell Done!\n");
+                     break;
                 case 9:
                     printf("Grade: A\nWell Done!\n");
                     break;
@@ -38,16 +36,16 @@ int main() {
                     printf("Grade: F\nYou failed, better luck next time!\n");
                     break;
             }
-            break; // Exit the loop for a valid score
+            break; //exit_valid_score
         }
 
-        if (invalid_attempts >= 3) {
+        if (invalid >= 3) {
             printf("The user has inserted 3 consecutive times an invalid score.\nExiting the program!\n");
-            return 1; // Exit the program
+            return -1; //quit
         }
 
         printf("Please enter a new exam score in the range 0-100:\n");
     }
 
-    return 0; // Successful execution
+    return 0;
 }
