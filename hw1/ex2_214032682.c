@@ -6,13 +6,12 @@ int main() {
 
     while (true) {
         printf("Please enter your exam score (0-100): ");
-        score
-        if (scanf("%d", &score) != 1) {//not_int
-            printf("Invalid input score:\n");
-        } else if (score < 0 || score > 100) {
+        scanf("%d",&score);
+        if (score < 0 || score > 100) {
             printf("Invalid input score: %d\n", score);
             invalid++;
-        } else {
+        }
+        else{
             switch (score / 10) {
                 case 10:
                     printf("Grade: A\nWell Done!\n");
