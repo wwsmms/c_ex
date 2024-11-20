@@ -10,6 +10,7 @@ int main() {
         if (score < 0 || score > 100) {
             printf("Invalid input score: %d\n", score);
             invalid++;
+            printf("Please enter a new exam score in the range 0-100:\n");
         }
         else{
             switch (score / 10) {
@@ -43,7 +44,6 @@ int main() {
             return -1; //quit
         }
 
-        printf("Please enter a new exam score in the range 0-100:\n");
     }
 
     return 0;
