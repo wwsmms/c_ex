@@ -37,5 +37,17 @@ int main(){
     printf("Here is some information about the given number: %d\n",num);
     sign(num);
     printf("Decimal Representation of absolute value: %d\n", abs(num));
-    digit_sum_and_num(num);
+    digit_sum_and_num(abs(num));
+    switch (base)
+    {
+    case 8:
+        printf("0d%d = 0%o\n", abs(num), abs(num));
+        break;
+    case 16:
+        printf("0d%d = 0x%x\n", abs(num), abs(num));
+        break;
+    default:
+        printf("Base 10 representation was already computed above.\n");
+        break;
+    }
 }
