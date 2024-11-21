@@ -3,9 +3,8 @@
 int main() {
     int score,true=1;
     int invalid = 0; //invalid_attempts
-
+    printf("Please enter your exam score (0-100): ");//see if should inside while
     while (true) {
-        printf("Please enter your exam score (0-100): ");
         scanf("%d",&score);
         if (score < 0 || score > 100) {
             printf("Invalid input score: %d\n", score);
