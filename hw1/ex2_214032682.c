@@ -3,7 +3,7 @@
 int main() {
     int score,true=1;
     int invalid = 0; //invalid_attempts
-    printf("Please enter your exam score (0-100): ");//see if should inside while
+    printf("Please enter your exam score (0-100):\n");//see if should inside while
     while (true) {
         scanf("%d",&score);
         if (score < 0 || score > 100) {
