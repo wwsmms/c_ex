@@ -10,10 +10,11 @@ void sign(int num){//print sign
     else 
         printf("It’s sign is: 0"); 
 }
-void digit_sum(int num){//should i add int org=num?
-    int sum=0;
+void digit_sum_and_num(int num){//should i add int org=num?
+    int sum=0,i=0;
     while (num>0){
         sum+=num%10;
+        i++;
         num/=10;
     }
     printf("The sum of digits is:%d\n",sum);
