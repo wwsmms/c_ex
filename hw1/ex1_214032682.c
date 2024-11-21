@@ -18,6 +18,7 @@ void digit_sum_and_num(int num){//should i add int org=num?
         num/=10;
     }
     printf("The sum of digits is:%d\n",sum);
+    printf("The number of digits is:%d\n",i);
 }
 int main(){
     printf("helloworld");
