@@ -4,11 +4,11 @@ int abs(int x){//calculate absulote value
 }
 void sign(int num){//print sign
     if (num>0)
-        printf("It’s sign is: +");
+        printf("It’s sign is: +\n");
     else if (num<0)
-        printf("It’s sign is: -");
+        printf("It’s sign is: -\n");
     else 
-        printf("It’s sign is: 0"); 
+        printf("It’s sign is: 0\n"); 
 }
 void digit_sum_and_num(int num){//should i add int org=num?
     int sum=0,i=0;
@@ -20,7 +20,22 @@ void digit_sum_and_num(int num){//should i add int org=num?
     printf("The sum of digits is:%d\n",sum);
     printf("The number of digits is:%d\n",i);
 }
+
 int main(){
-    printf("helloworld");
-    return 0;
+    int num,base;
+    printf("Please enter an integer and a base: ");
+    scanf("%d %d", &num, &base);
+    while (1){
+        if (base!=8 && base!=10 && base!=16){
+        printf("Invalid base%d\nPlease enter 8, 10, or 16.\n",base);
+        scanf("%d",&base);
+        }
+        else{
+            break;
+            }
+    }
+    printf("Here is some information about the given number: %d\n",num);
+    sign(num);
+    printf("Decimal Representation of absolute value: %d\n", abs(num));
+    digit_sum_and_num(num);
 }
