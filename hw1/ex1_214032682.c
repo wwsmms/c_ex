@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 int abs(int x){//calculate absulote value
     return (x<0) ? -x : x;
